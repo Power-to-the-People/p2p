@@ -1,4 +1,4 @@
-<%@ taglib tagdir="tags/p2p" prefix="p2p" %>
+<%@ taglib tagdir="/WEB-INF/tags/p2p" prefix="p2p" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <p2p:pageHeader/>
