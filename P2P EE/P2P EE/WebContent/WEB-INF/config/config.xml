@@ -3,7 +3,8 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-<bean class="nz.org.p2p.model.member.authentication.PasswordResetTokenFactory">
-	<property name="lifeSpan" value="36"/>
-</bean>
+	<bean
+		class="nz.org.p2p.model.member.authentication.PasswordResetTokenFactory">
+		<property name="lifeSpan" value="36" />
+	</bean>
 </beans>

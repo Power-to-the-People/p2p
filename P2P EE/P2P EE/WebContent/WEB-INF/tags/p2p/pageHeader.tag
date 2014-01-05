@@ -66,7 +66,7 @@
 					<a class='b6_menuBar__buttonGroup__button b6_menuBar__buttonGroup__button__1' href='/index'>Home</a>"
 					<a class='b6_menuBar__buttonGroup__button b6_menuBar__buttonGroup__button__2' href='/introduction'>Learn more</a>"
 					<a class='b6_menuBar__buttonGroup__button b6_menuBar__buttonGroup__button__3' href='/progress'>Check Progress</a>"
-					<a class='b6_menuBar__buttonGroup__button b6_menuBar__buttonGroup__button__4' href='/join'>Join & Support</a>"
+					<a class='b6_menuBar__buttonGroup__button b6_menuBar__buttonGroup__button__4' href='/join'>Join &amp; Support</a>"
 					<a class='b6_menuBar__buttonGroup__button b6_menuBar__buttonGroup__button__5' href='/contact'>Contact</a>"
 					<a class='b6_menuBar__buttonGroup__button b6_menuBar__buttonGroup__button__6' href='javascript:c5_openLoginDialog()'>Log In</a>"
 	</c:otherwise>

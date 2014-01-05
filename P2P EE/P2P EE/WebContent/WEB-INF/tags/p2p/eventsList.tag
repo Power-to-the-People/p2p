@@ -8,6 +8,8 @@
   import="java.text.DataFormatSymbols"
   import="java.text.DataFormatSymbolsProvider"
 %>
+
+<%! Calendar now=Calendar.getInstance(); %>
 <%@attribute name="events" type="nz.org.p2p.model.event.EventManager" %>
  <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
  <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
@@ -15,7 +17,7 @@
 	<c:when test="${empty request.parameters.year}">
 		<jsp:useBean id="thisYear" type="java.lang.Integer"/>
 		<jsp:useBean id="now" type="java.util.Calendar"/>
-		<c:set var="now" value="<%=Calendar.getInstance() %>"/>
+		<c:set var="now" value="<%= now. %>"/>
 		<c:set var="thisYear" value="<%= now.get(java.util.Calendar.YEAR) %>"/>
 		<c:set var="thisMonth" value="<%= now.get(java.util.Calendar.MONTH) %>"/>
 		<c:set var="visibleEvents" value="${events.activeInYear(thisYear) }"/>
