@@ -1,0 +1,7 @@
+nz.org.p2p.model.event
+nz.org.p2p.model.event.api
+nz.org.p2p.model.hibernate
+nz.org.p2p.model.member
+nz.org.p2p.model.member.api
+nz.org.p2p.model.member.authentication
+nz.org.p2p.model.member.authentication.api

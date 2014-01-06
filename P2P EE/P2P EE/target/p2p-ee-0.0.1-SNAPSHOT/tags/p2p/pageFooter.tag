@@ -1,33 +1,30 @@
-<%@ tag
-  import="nz.org.p2p.model.data.P2P"
-  import="nz.org.p2p.model.data.HTML"
-  import="nz.org.p2p.model.data.persistent.Member"
- %>
- <%@ attribute name="includes" fragment="true" %>
- 
+<%@tag %>
+
  <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
- <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<!DOCTYPE html>
-<html>  
-	<head> 
-		<!--Power to the People.  Version: <%=P2P.version%> -->  
-		<link rel='icon' type='image/png' href='/system/files/images/favicon.png'>
-		<link rel='stylesheet' href='/system/files/css/jquery-ui-1.9.2.custom.min.css' />
-		<link rel='stylesheet' href='/system/files/css/jquery.bxslider.css' />
-		<link rel='stylesheet' href='/system/files/css/fileuploader.css' />
-		<link rel='stylesheet' href='/system/files/css/p2p.css' />
-		<script src='/system/files/js/jquery-1.9.0.min.js'></script>
-		<script src='/system/files/js/jquery-ui-1.9.2.custom.min.js'></script>
-		<script src='/system/files/js/fileuploader.js'></script>
-		<script src='/system/files/js/jquery.autosize.min.js'></script>
-		<script src='/system/files/js/jquery.bxslider.min.js'></script>
-		<script src='/system/files/js/highcharts.js'></script>
-		<script src='/system/files/js/p2p.js'></script>
-		<c:if test="${not empty}">
-		    <jsp:invoke fragment="${includes}"/>
-		</c:if>	
-		<p2p:googleAnalytics indent="2"/>
-	</head>
-	<body>
-	<c:if test="${session.user.isAuthenticated}">
-	</c:if>
+
+<div class='b49_footer'>
+
+<c:if test="${not session.user.authenticated}">
+	<div id='loginDialog' style='display:none'>
+		<div class='b128_login'>
+			<div class='b128_login__field'>
+				<span class='b128_login__field__label'>User Name</span>
+				<input id='un' class='b128_login__field__text' id='un' type='text' onClick="javascript:$('.b128_login__fail').css('display','none');" style='width:240px;' value='' autocomplete='off'>
+			</div>
+			<div class='b128_login__field'>
+				<span class='b128_login__field__label'>Password</span>
+				<input id='pw' class='b128_login__field__text' id='un' type='password' onClick="javascript:$('.b128_login__fail').css('display','none');" style='width:240px;' value='' autocomplete='off'>
+			</div>
+			<div class='b128_login__control'>
+				<a class='b128_login__control__button m1_button' href='javascript:c6_login()'>Login</a>
+				<input class='b128_login__control__checkBox' id='rm' checked type='checkbox'>
+				<span class='b128_login__control__checkbox__text'>Remember me.</span>
+			</div>
+			<div class='b128_login__fail'><b>Login failed:</b>&nbsp;please check user name and password.</div>
+		</div>
+	</div>	
+</c:if>
+</div>
+	</body>
+</html>
+
