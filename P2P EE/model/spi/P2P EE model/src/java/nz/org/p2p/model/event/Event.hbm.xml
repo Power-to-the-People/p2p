@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 13/01/2014 6:38:47 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+ <class name="nz.org.p2p.model.event.Event" table="EVENT">
+  <id name="eventId" type="long">
+   <column name="EVENTID"/>
+   <generator class="assigned"/>
+  </id>
+  <property generated="never" lazy="false" name="eventName" type="java.lang.String">
+   <column name="event_name"/>
+  </property>
+  <property generated="never" lazy="false" name="active" type="boolean">
+   <column name="is_active"/>
+  </property>
+  <property generated="never" lazy="false" name="snippitId" type="long">
+   <column name="snippit_id"/>
+  </property>
+  <property generated="never" lazy="false" name="eid" type="java.lang.String">
+   <column name="e_id"/>
+  </property>
+  <property generated="never" lazy="false" name="description" type="java.lang.String">
+   <column name="description"/>
+  </property>
+  <property generated="never" lazy="false" name="eventIdentifier" type="java.lang.String">
+   <column name="event_identifier"/>
+  </property>
+  <property generated="never" lazy="false" name="link" type="java.lang.String">
+   <column name="link"/>
+  </property>
+  <property generated="never" lazy="false" name="location" type="java.lang.String">
+   <column name="location"/>
+  </property>
+  <property generated="never" lazy="false" name="dateStart" type="java.util.Calendar">
+   <column name="date_start"/>
+  </property>
+  <property generated="never" lazy="false" name="dateFinish" type="java.util.Calendar">
+   <column name="date_finish"/>
+  </property>
+  <property generated="never" lazy="false" name="eventMonth" type="int">
+   <column name="event_month"/>
+  </property>
+ </class>
+</hibernate-mapping>

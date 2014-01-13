@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 13/01/2014 8:24:28 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<joined-subclass name="nz.org.p2p.model.discussion.Comment"
+			extends="nz.org.p2p.model.discussion.Post" 
+			table="COMMENT" 
+			lazy="false">
+
+		<key>
+			<column name="GUID" />
+		</key>
+		<many-to-one name="parentPost"
+			class="nz.org.p2p.model.discussion.api.PostService" fetch="join">
+			<column name="parent_post_id" />
+		</many-to-one>
+	</joined-subclass>
+</hibernate-mapping>

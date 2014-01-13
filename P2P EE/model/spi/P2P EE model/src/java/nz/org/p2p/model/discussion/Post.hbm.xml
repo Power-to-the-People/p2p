@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 13/01/2014 8:24:28 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+ <subclass discriminator-value="Post"
+  extends="nz.org.p2p.model.discussion.api.PostService" lazy="false"
+  name="nz.org.p2p.model.discussion.Post" select-before-update="false">
+  <property generated="never" lazy="false" name="postId" type="long">
+   <column name="post_id" sql-type="BIGINT"/>
+  </property>
+  <property generated="never" lazy="false" name="deleted" type="boolean">
+   <column length="1" name="deleted" sql-type="BIT"/>
+  </property>
+  <property generated="never" lazy="false" name="guid" type="java.lang.String">
+   <column name="guid"/>
+  </property>
+  <property generated="never" lazy="false" name="level" type="int">
+   <column name="level" sql-type="INTEGER"/>
+  </property>
+  <property generated="never" lazy="false" name="lineage" type="java.lang.String">
+   <column name="LINEAGE"/>
+  </property>
+  <property generated="never" lazy="false" name="postBody" type="java.lang.String">
+   <column name="post_body" sql-type="LONGVARCHAR"/>
+  </property>
+  <property generated="never" lazy="false" name="posterId" type="long">
+   <column name="poster_id" sql-type="BIGINT"/>
+  </property>
+  <property generated="never" lazy="false" name="posterTypeId" type="int">
+   <column name="poster_type_id"/>
+  </property>
+  <property generated="never" lazy="false" name="postTime" type="java.util.Calendar">
+   <column name="post_time"/>
+  </property>
+  <property generated="never" lazy="false" name="subThreadId" type="long">
+   <column name="sub_thread_id" sql-type="BIGINT"/>
+  </property>
+  <property generated="never" lazy="false" name="threadId" type="long">
+   <column name="thread_id"/>
+  </property>
+  <many-to-one access="field"
+   class="nz.org.p2p.model.discussion.Post$CommentSet" fetch="join" name="commentServices">
+   <column name="replies" />
+  </many-to-one>
+  <subclass discriminator-value="REPLY" entity-name="Comment" name="comments"/>
+ </subclass>
+</hibernate-mapping>
